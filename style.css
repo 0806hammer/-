@@ -1,49 +1,47 @@
-/* 基礎設定 */
-body {
-    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    color: #333;
-}
+/* style.css 修正版 */
 
-/* 導覽列 */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #002D62; /* 深藍色調，展現專業與水的意象 */
-    color: white;
-}
-
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-
-/* 英雄區 */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG_1756.jpg');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('IMG_1756.jpg');
     background-size: cover;
     background-position: center;
+    
+    /* 核心修改：利用 Flexbox 將內容推向底部與左側 */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    align-items: flex-end;    /* 垂直對齊：底部 */
+    justify-content: flex-start; /* 水平對齊：左側 */
+    padding: 60px;            /* 留出邊緣呼吸空間 */
 }
 
+.hero-content {
+    text-align: left;         /* 文字靠左對齊，增加專業感 */
+    max-width: 600px;         /* 限制寬度，避免文字橫跨整張圖 */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0;         /* 縮減標題下方的間隙 */
+}
+
+/* 這是你要移下來的第二排字 */
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;         /* 這裡可以微調與標題的距離 */
+    margin-bottom: 30px;      /* 給下方的預約按鈕留點位置 */
+}
+
+/* 預約評估按鈕 */
 .cta-button {
-    background: #FFD700; /* 金色，代表熱情與專業 */
+    display: inline-block;
+    background: #FFD700;      /* 醒目的金色 */
     padding: 15px 30px;
-    color: #002D62;
+    color: #002D62;           /* 專業深藍色文字 */
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* 內容區塊 */
-.content-section { padding: 50px; text-align: center; }
-.features { display: flex; justify-content: space-around; margin-top: 30px; }
-.feature { flex: 1; padding: 20px; }
-
-footer { background: #f4f4f4; text-align: center; padding: 20px; }
+.cta-button:hover {
+    background: #fff;         /* 滑鼠移上去變白色，增加互動感 */
+}
