@@ -22,6 +22,7 @@ nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 /* 英雄區 */
 .hero {
     height: 80vh;
+    /* 這裡最重要：要把原本的 0,5 改成 0.5 (用句點) */
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG_1756.jpg');
     background-size: cover;
     background-position: center;
