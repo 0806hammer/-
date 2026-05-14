@@ -22,7 +22,7 @@ nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 /* 英雄區 */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('YOUR_IMAGE_URL.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG_1756.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
