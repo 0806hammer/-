@@ -1,50 +1,54 @@
-/* 基礎設定 */
-body {
-    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    color: #333;
+/* style.css 中關於 .hero 的部分請全部替換 */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 建立兩個等寬欄位：左照片、右文字 */
+    height: 80vh; /* 保持原有的高度 */
+    background: #fff; /* 整個區塊使用乾淨的白色背景 */
+    overflow: hidden; /* 確保內容不溢出 */
 }
 
-/* 導覽列 */
-nav {
+/* 左側照片欄 */
+.hero-image-column {
+    background-image: url('IMG_1756.jpg');
+    background-size: cover; /* 照片鋪滿欄位 */
+    background-position: center; /* 照片居中展示 */
+    height: 100%;
+}
+
+/* 右側文字欄 */
+.hero-text-column {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #002D62; /* 深藍色調，展現專業與水的意象 */
-    color: white;
+    flex-direction: column;
+    justify-content: center; /* 文字垂直置中 */
+    align-items: flex-start; /* 文字靠左對齊，看起來更專業 */
+    padding: 60px; /* 給文字足夠的呼吸空間 */
+    background: #fff;
+    color: #002D62; /* 更改文字顏色為專業的深藍色，取代原本的白色 */
 }
 
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-
-/* 英雄區 */
-.hero {
-    height: 80vh;
-    /* 這裡最重要：要把原本的 0,5 改成 0.5 (用句點) */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('IMG_1756.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.cta-button {
-    background: #FFD700; /* 金色，代表熱情與專業 */
-    padding: 15px 30px;
+.hero-text-column h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
     color: #002D62;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+    text-align: left; /* 確保標題靠左 */
 }
 
-/* 內容區塊 */
-.content-section { padding: 50px; text-align: center; }
-.features { display: flex; justify-content: space-around; margin-top: 30px; }
-.feature { flex: 1; padding: 20px; }
+.hero-text-column h2 {
+    font-size: 1.5rem;
+    color: #004080; /* 副標題使用稍淺的藍色 */
+    margin-bottom: 20px;
+    text-align: left;
+}
 
-footer { background: #f4f4f4; text-align: center; padding: 20px; }
+.hero-text-column p {
+    font-size: 1.1rem;
+    color: #333; /* 內文用深灰色，提升閱讀舒適度 */
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* 行動呼籲按鈕 (CTA) 保持原樣但確保靠左 */
+.hero-text-column .cta-button {
+    align-self: flex-start; /* 確保按鈕本身靠左對齊 */
+}
