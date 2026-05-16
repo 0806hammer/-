@@ -42,8 +42,36 @@ nav ul li a { color: white; text-decoration: none; font-weight: bold; }
 }
 
 /* 內容區塊 */
-.content-section { padding: 50px; text-align: center; }
-.features { display: flex; justify-content: space-around; margin-top: 30px; }
-.feature { flex: 1; padding: 20px; }
+.content-section { 
+    padding: 50px; 
+    text-align: center; 
+}
+
+.features { 
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 30px; 
+}
+
+/* ✨ 這裡幫你把舊的 flex 樣式跟新的人像居中對齊合併了 */
+.feature { 
+    flex: 1; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓圖片、標題、文字全部整齊居中 */
+    text-align: center;
+}
+
+/* ✨ 新增的課程圖片控制樣式 */
+.course-img {
+    width: 100%; /* 寬度自動適應欄位 */
+    max-width: 300px; /* 限制圖片最大寬度，避免照片太大撐爆版面 */
+    height: 200px; /* 固定高度，確保三張圖切得一模一樣大 */
+    object-fit: cover; /* 自動裁切照片多餘部分，絕對不變形 */
+    border-radius: 12px; /* 圓角修飾，看起來更具現代感 */
+    margin-bottom: 20px; /* 跟下方標題保持呼吸間距 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 加一點淡淡的陰影，讓照片浮現立體感 */
+}
 
 footer { background: #f4f4f4; text-align: center; padding: 20px; }
